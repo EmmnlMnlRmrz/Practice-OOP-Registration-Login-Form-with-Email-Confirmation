@@ -1,5 +1,12 @@
 <?php 
     include "init.php";
+    
+    if(isset($_SESSION['userID'])):
+
+        header("location: dashboard.php");
+
+    endif;
+
     $validations = new validations;
     $dbQueries  = new dbQueries;
     $emailObj    = new email;

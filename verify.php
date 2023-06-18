@@ -1,5 +1,8 @@
 <?php
 include "init.php";
+
+
+
 $dbQueries = new dbQueries;
 
 if(isset($_GET['confirmation'])){

@@ -1,10 +1,11 @@
 <?php include "init.php"; ?>
 <?php
 
+
+
 $messages = new messages;
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +33,11 @@ $messages = new messages;
     <?php $messages->showMessage("forgotRequest", "success"); ?>
     <!-- Forgot password request URL -->
     <?php $messages->showMessage("forgotWrongURL", "error"); ?>
+    <!-- Access Forbidden -->
+    <?php $messages->showMessage("accessForbidden", "error"); ?>
+    <!-- passwordUpdated -->
+    <?php $messages->showMessage("passwordUpdated", "success"); ?>
+    <?php unset($_SESSION['requestUserID']); ?>
 
         </div>
         <!-- Close messageBoxContainer -->

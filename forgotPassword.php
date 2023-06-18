@@ -2,6 +2,12 @@
 
 include "init.php";
 
+if(isset($_SESSION['userID'])):
+
+    header("location: dashboard.php");
+
+endif;
+
     $dbQueries = new dbQueries;
 
     if(isset($_GET['forgot'])){
@@ -27,7 +33,5 @@ include "init.php";
                 $_SESSION['forgotWrongURL'] = "Sorry wrong forgot password request URL";
                 header("location: message.php");
     }
-
-
 
 ?>
